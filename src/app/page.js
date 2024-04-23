@@ -8,6 +8,6 @@ export default async function Home() {
   const posts = await loadPosts()
 
   return (
-    <PostList />
+    <PostList posts={posts} />
   );
 }
