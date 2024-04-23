@@ -20,8 +20,10 @@ export default function PostList({ posts }) {
   return ([
     <div
       key="list"
-      className="py-8 px-4 max-w-screen-xl lg:py-4 lg:px-6">
-      <ul>
+      className="py-8 px-4 max-sm:min-w-full max-w-screen-md lg:py-4 lg:px-6">
+      <ul
+        className="flex flex-col space-between"
+      >
           {currentPosts.map( (p, idx) => {
             return (
               <li key={idx} className="my-4">

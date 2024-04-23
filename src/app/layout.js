@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
             </div>
           </div>
         </nav>
-        <main className="flex flex-col justify-between">
+        <main className="flex flex-col justify-between items-center">
           {children}
         </main>
       </body>
