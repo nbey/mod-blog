@@ -1,14 +1,6 @@
+import { loadPost } from "@/api/load-posts"
 import Link from "next/link"
 
-export async function loadPost(postId) {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
-
-  if (!res.ok) {
-    throw new Error('Failed to fetch data')
-  }
-
-  return res.json()
-}
 export default async function PostDetails({ params: { id }}) {
   const post = await loadPost(id)
 

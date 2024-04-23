@@ -1,14 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { loadPosts } from "@/api/load-posts";
 
-export async function loadPosts() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts')
-  if (!res.ok) {
-    throw new Error('Failed to fetch data')
-  }
-
-  return res.json()
-}
 
 export default async function Home() {
   const posts = await loadPosts()
