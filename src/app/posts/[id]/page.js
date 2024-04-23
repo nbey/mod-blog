@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export async function loadPost(postId) {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
 
