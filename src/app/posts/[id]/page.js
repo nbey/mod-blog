@@ -5,7 +5,7 @@ export default async function PostDetails({ params: { id }}) {
   const post = await loadPost(id)
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col sm:p-24 h-[calc(100vh-87px)]">
       <div className="inline-flex items-center pt-4 pl-4">
         <span className="sr-only">Prev Page</span>
         <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
@@ -22,9 +22,7 @@ export default async function PostDetails({ params: { id }}) {
       <h1 className="capitalize p-4 text-4xl border-black border-solid border-b-2">
         {post.title}
       </h1>
-      <p
-        className="p-6 mt-8"
-      >{post.body}</p>
+      <p className="p-6 mt-8">{post.body}</p>
     </div>
   )
 }
