@@ -33,7 +33,19 @@ export default async function Home() {
                         <span className="text-sm text-end">2 days ago</span>
                     </div>
                   </div>
-                  <div className="flex justify-end items-center">
+                  <div className="flex justify-between items-center mt-4">
+                      <div className="flex items-center space-x-4">
+                          <Image
+                            className="w-7 h-7 rounded-full"
+                            src="/avatar.jpeg"
+                            width={7}
+                            height={7}
+                            alt="Nafis Bey's avatar"
+                          />
+                          <span className="font-medium dark:text-white">
+                              Nafis Bey
+                          </span>
+                      </div>
                       <Link href={`/posts/${p.id}`} className="inline-flex items-center font-medium text-primary-600 hover:underline">
                           Read more
                           <svg className="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
