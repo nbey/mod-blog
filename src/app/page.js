@@ -19,17 +19,27 @@ export default async function Home() {
       className="w-full"
     >
       <ul>
-        {posts.slice(0,10).map((b, idx) => (
+        {posts.slice(0,10).map((p, idx) => (
           <li
             key={idx}
             className="my-4"
           >
-            <div>
-              <h3 className="title"
-                ><Link href={`/posts/${b.id}`}>{b.title}</Link>
-              </h3>
-              <p className="body">{b.body}</p>
-            </div>
+            <article className="p-4 bg-white rounded-lg border border-gray-200 shadow-md">
+                  <div className="flex flex-row justify-between">
+                    <h2 className="capitalize hover:underline text-2xl font-bold tracking-tight w-4/5">
+                      <a href={`/posts/${p.id}`}>{p.title}</a>
+                    </h2>
+                    <div className="flex justify-end items-center mb-5 text-gray-500 self-baseline">
+                        <span className="text-sm text-end">2 days ago</span>
+                    </div>
+                  </div>
+                  <div className="flex justify-end items-center">
+                      <Link href={`/posts/${p.id}`} className="inline-flex items-center font-medium text-primary-600 hover:underline">
+                          Read more
+                          <svg className="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
+                      </Link>
+                  </div>
+                </article>
           </li>
         ))}
       </ul>
