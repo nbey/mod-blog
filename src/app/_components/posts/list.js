@@ -20,7 +20,7 @@ export default function PostList({ posts }) {
   return ([
     <div
       key="list"
-      className="py-8 px-4 mx-auto max-w-screen-xl lg:py-4 lg:px-6">
+      className="py-8 px-4 max-w-screen-xl lg:py-4 lg:px-6">
       <ul>
           {currentPosts.map( (p, idx) => {
             return (
